@@ -1,0 +1,161 @@
+body{
+    background-color: #fafafa;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    line-height: 64px;
+    z-index: 11;
+    background: #FFFFFF;
+    min-width: 1200px;
+    padding-left: 200px;
+
+}
+.pingpai{
+    position: absolute;
+    left: 37px;
+    font-size: 25px;
+    font-weight: bold;
+    color: crimson;
+}
+.pingpai a{
+    text-decoration: none;
+    color:red;
+}
+.top-select{
+    position: relative;
+}
+.top-left{
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top1{
+    display: block;
+    float: left;
+    padding-top: 16px;
+    list-style: none;
+}
+.top2{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #445578;
+    margin-right: 48px;
+    cursor: pointer;
+}
+.top-right{
+    float: right;
+    height: 60px;
+    width: 370px;
+    text-align: right;
+    padding-right: 50px;
+}
+.top3{
+    cursor: pointer;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-style: normal;
+}
+.top-right2{
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333333;
+    margin-left: 30px;
+}
+.middle{
+    height: 100%;
+}
+.middle1{
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 65px;
+    width: 160px;
+    background: #242b40;
+    min-height: 100vh;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+.middle2{
+    border-top: 0;
+    padding-left: 5px;
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    color:gainsboro;
+    line-height: 56px;
+    list-style: none;
+}
+.home{
+    padding: 0 0 0 0;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+.home1{
+    margin-top: 15px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 16px 24px 24px;
+}
+.home2{
+    margin-top: 0px;
+    border-radius: 8px;
+    border: 1px solid #d1def7;
+    padding: 13px 16px 24px;
+    box-sizing: border-box;
+}
+#biaoge{
+    top:45%;
+    left:45%;
+    position:absolute;
+    margin-top:-100px;
+    margin-left:-50px;
+}
+.biaodan1{
+    font-size: 40px;
+}
+.biaodan2{
+    font-size: 25px;
+    width: 80%;
+}
+.biaodan4{
+    font-size: 25px;
+    width: 80%;
+}
+#little{
+    font-size: 15px;
+    font-weight: bold;
+    width: auto;
+}
+#little2{
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+}
+.long{
+    width:300px;
+}
+#tupian img{
+    width: 400px;
+    height: 250px;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wule.mapper.DingdanMapper">
+
+    <insert id="add_dingdan" parameterType="com.wule.pojo.DingdanInfo">
+        insert into dingdan(ID,telephone,driver_telephone,jiedan_time,final_time,final_price,zhuangtai,kanjia,why_kanjia,tijia,why_tijia) values
+	    (#{ID},#{telephone},#{driver_telephone},#{jiedan_time},#{final_time},#{final_price},#{zhuangtai},#{kanjia},#{why_kanjia},#{tijia},#{why_tijia})
+    </insert>
+
+    <select id="select" parameterType="java.lang.Integer" resultType="com.wule.pojo.DingdanInfo" >
+        select * from dingdan limit #{start},5
+    </select>
+
+    <select id="select_by_ID" parameterType="java.lang.String" resultType="com.wule.pojo.DingdanInfo">
+        select * from dingdan where ID=#{ID}
+    </select>
+
+    <select id="select_by_driver" parameterType="java.util.HashMap" resultType="com.wule.pojo.DingdanInfo">
+        select * from dingdan where driver_telephone=#{driver_telephone} order by ID desc limit #{start},3
+    </select>
+
+    <update id="dingdan_update" parameterType="com.wule.pojo.TaskInfo">
+        update dingdan
+        <trim prefix="set" suffixOverrides="," suffix=" WHERE ID=#{ID}">
+            <if test="final_time !=null and final_time !='' ">final_time=#{final_time},</if>
+            <if test="final_price !=null and final_price !='' ">final_price=#{final_price},</if>
+            <if test="zhuangtai != null and zhuangtai !='' ">zhuangtai =#{zhuangtai},</if>
+            <if test="kanjia != null and kanjia !='' ">kanjia =#{kanjia},</if>
+            <if test="why_kanjia != null and why_kanjia !='' ">why_kanjia =#{why_kanjia},</if>
+            <if test="tijia != null and tijia !='' ">tijia =#{tijia},</if>
+            <if test="why_tijia != null and why_tijia !='' ">why_tijia =#{why_tijia},</if>
+        </trim>
+    </update>
+
+</mapper>

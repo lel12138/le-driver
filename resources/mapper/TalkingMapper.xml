@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wule.mapper.TalkingMapper">
+
+    <insert id="add_talking" parameterType="com.wule.pojo.TalkingInfo">
+        insert into talking(talkingID,ID,typee,valuee,timee,see) values
+	    (#{talkingID},#{ID},#{typee},#{valuee},#{timee},#{see})
+    </insert>
+
+    <select id="select_lnglat" parameterType="com.wule.pojo.TalkingInfo" resultType="java.lang.String">
+        select valuee from talking where ID=#{ID} and typee=#{typee}
+    </select>
+
+    <select id="select_talking" parameterType="java.lang.String" resultType="com.wule.pojo.TalkingInfo">
+        select * from talking where ID=#{ID} and typee="用户发言" or typee="司机发言"
+    </select>
+
+    <update id="driverseele" parameterType="java.lang.String">
+        UPDATE talking set see="yes" WHERE ID=#{ID} and typee="用户发言" ;
+    </update>
+
+    <update id="userseele" parameterType="java.lang.String">
+        UPDATE talking set see="yes" WHERE ID=#{ID} and  typee="司机发言";
+    </update>
+
+    <select id="driversee" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select COUNT(*) from talking where ID=#{ID} and see="no"and typee="司机发言"
+    </select>
+
+    <select id="usersee" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select COUNT(*) from talking where ID=#{ID} and see="no" and  typee="用户发言"
+    </select>
+
+    <update id="update_lnglat" parameterType="com.wule.pojo.TalkingInfo">
+        update talking
+        <trim prefix="set" suffixOverrides="," suffix=" WHERE ID=#{ID} and typee=#{typee}">
+            <if test="valuee !=null and valuee!='' ">valuee=#{valuee},</if>
+            <if test="timee != null and timee!='' ">timee =#{timee},</if>
+            <if test="see != null and see!='' ">see =#{see},</if>
+        </trim>
+    </update>
+
+</mapper>

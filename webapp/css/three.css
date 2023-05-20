@@ -1,0 +1,56 @@
+.left{
+    top:20%;
+    left: 0;
+    position:absolute;
+    font-size: 20px;
+    width:35%;
+    float:left;
+}
+.right{
+    top:0;
+    left: 30%;
+    position:absolute;
+    font-size: 20px;
+    width:65%;
+    float:right;
+}
+a{
+    font-size:20px;
+    color: black;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+}
+.small{
+    font-size:15px;
+}
+.small2{
+    font-size:12px;
+}
+.small2 a{
+    color: red;
+}
+.biaodan{
+    font-size: 20px;
+    width: 80%;
+}
+#a{
+    width: 100%;
+}
+#shiming{
+    font-size:15px;
+    color: red;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+}
+#be_a_driver{
+    display: none;
+}
+#GO{
+    color: red;
+    font-weight: bold;
+}
+#money{
+    font-size: 25px;
+    font-weight: bold;
+    color: gold;
+}

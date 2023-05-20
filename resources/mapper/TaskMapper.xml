@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wule.mapper.TaskMapper">
+
+    <insert id="add_task" parameterType="com.wule.pojo.TaskInfo">
+	    insert into task(ID,telephone,city,send_time,qidian,qidian_lng,qidian_lat,zhongdian,zhongdian_lng,zhongdian_lat,fangan,distance,use_time,price,zhuangtai) values
+	    (#{ID},#{telephone},#{city},#{send_time},#{qidian},#{qidian_lng},#{qidian_lat},#{zhongdian},#{zhongdian_lng},#{zhongdian_lat},#{fangan},#{distance},#{use_time},#{price},#{zhuangtai})
+    </insert>
+
+    <select id="select_task" parameterType="java.util.HashMap" resultType="com.wule.pojo.TaskInfo">
+        select * from task where city=#{city} and zhuangtai="等待接单" limit #{start},5
+    </select>
+
+    <select id="select_task2" parameterType="java.lang.String" resultType="com.wule.pojo.TaskInfo">
+        select * from task where ID=#{ID}
+    </select>
+
+    <update id="task_update" parameterType="com.wule.pojo.TaskInfo">
+        update task
+        <trim prefix="set" suffixOverrides="," suffix=" WHERE ID=#{ID}">
+            <if test="zhuangtai !=null and zhuangtai!='' ">zhuangtai=#{zhuangtai},</if>
+            <if test="price !=null and price!='' ">price=#{price},</if>
+        </trim>
+    </update>
+
+    <select id="select_by_user" parameterType="java.util.HashMap" resultType="com.wule.pojo.TaskInfo">
+        select * from task where telephone=#{telephone} order by ID desc limit #{start},3
+    </select>
+
+    <select id="shifoujiedan" parameterType="java.lang.String" resultType="java.lang.String">
+        select zhuangtai from task where ID=#{ID}
+    </select>
+
+</mapper>

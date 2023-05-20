@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+a{
+    font-size:30px;
+    color: black;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+}
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+#panel {
+    position: fixed;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+}
+#panel .amap-call {
+    background-color: #009cf9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+#panel .amap-lib-driving {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+}
+#me{
+    font-size: 20px;
+    text-align: center;
+    top:0;
+    left:0;
+    position:absolute;
+}
+#meme{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.amap-logo{
+    opacity: 0;
+}
+.amap-copyright{
+    opacity: 0;
+}
+#road {
+    font-size: 15px;
+    text-align: center;
+    bottom:80px;
+    left:10px;
+    position:absolute;
+    margin-top:-100px;
+
+}
+#road table{
+    width: 300px;
+    background-color: #FFFFFF;
+}
+
+#road input {
+    width:300px;
+    font-size: 15px;
+}

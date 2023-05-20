@@ -1,0 +1,49 @@
+a{
+    font-size:30px;
+    color: black;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+}
+#go{
+    font-size: 20px;
+    text-align: center;
+    bottom: 10px;
+    left:10px;
+    position:absolute;
+    margin-top:-100px;
+
+}
+#go table{
+    width: 300px;
+    background-color: #FFFFFF;
+}
+#go input{
+    font-size: 15px;
+}
+
+
+#me{
+    font-size: 20px;
+    text-align: center;
+    top:0;
+    left:0;
+    position:absolute;
+}
+#meme{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#address{
+    font-size: 20px;
+}
+#shuoming{
+    font-size: 10px;
+    text-align: left;
+}
+.amap-logo{
+    opacity: 0;
+}
+.amap-copyright{
+    opacity: 0;
+}

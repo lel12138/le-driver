@@ -1,0 +1,85 @@
+#biaoge{
+    top:45%;
+    left:30%;
+    position:absolute;
+    margin-top:-100px;
+    margin-left:-50px;
+}
+.biaodan1{
+    font-size: 40px;
+}
+.biaodan2{
+    font-size: 25px;
+    width: 80%;
+}
+.biaodan3{
+    font-size: 25px;
+    width: 50%;
+}
+.biaodan4{
+    font-size: 25px;
+    width: 80%;
+}
+.biaodan5{
+    font-size: 15px;
+    width: 30%;
+}
+.biaodan6{
+    font-size: 15px;
+    width: 80%;
+}
+.biaodan7{
+    font-size: 15px;
+    width: 100%;
+}
+.go-zhuce{
+    font-size:25px;
+    color: black;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+    text-align: center;
+    top:90%;
+    left:60%;
+    position:absolute;
+    margin-top:-100px;
+    margin-left:-100px;
+}
+.forget{
+    font-size:25px;
+    color: black;
+    background-color: white;
+    text-decoration: none;/*超链接去除下划线*/
+    text-align: center;
+    top:80%;
+    left:62%;
+    position:absolute;
+    margin-top:-100px;
+    margin-left:-100px;
+}
+#time{
+    width: 25px;
+    text-align: center;
+}
+#j{
+    top:20%;
+    left:10%;
+    position:absolute;
+    display: block;
+}
+#i{
+    top:30%;
+    left:10%;
+    position:absolute;
+    display: none;
+}
+#little{
+    font-size: 8px;
+}
+#wo{
+    font-size: 15px;
+    color: #0D9BF2;
+}
+#shiji{
+    font-size: 15px;
+    color: red;
+}

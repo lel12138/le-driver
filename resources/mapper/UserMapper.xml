@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wule.mapper.UserMapper">
+    <select id="denglu" resultType="com.wule.pojo.UserInfo" parameterType="com.wule.pojo.UserInfo">
+        select * from user
+        where telephone=#{telephone} and password=#{password}
+    </select>
+
+    <insert id="zhuce" parameterType="com.wule.pojo.UserInfo">
+        insert into user(telephone,password,is_driver,name,ID_card_number,money,jinji,location,car_number,car_type,score) values
+	    (#{telephone},#{password},"no",#{name},null,"0",null,null,null,null,"10")
+    </insert>
+
+    <select id="my_message" parameterType="java.lang.String" resultType="com.wule.pojo.UserInfo">
+        select * from user where telephone=#{telephone}
+    </select>
+
+    <update id="update_message" parameterType="com.wule.pojo.UserInfo">
+        update user
+        <trim prefix="set" suffixOverrides="," suffix=" WHERE telephone=#{telephone}">
+            <if test="password !=null and password!='' ">password=#{password},</if>
+            <if test="is_driver !=null and is_driver!='' ">is_driver=#{is_driver},</if>
+            <if test="name != null and name!='' ">name =#{name},</if>
+            <if test="ID_card_number !=null and ID_card_number!='' ">ID_card_number=#{ID_card_number},</if>
+            <if test="money !=null and money!='' ">money=#{money},</if>
+            <if test="jinji !=null and jinji!='' ">jinji=#{jinji},</if>
+            <if test="location !=null and location!='' ">location=#{location},</if>
+            <if test="car_number !=null and car_number!='' ">car_number=#{car_number},</if>
+            <if test="car_type !=null and car_type!='' ">car_type=#{car_type},</if>
+            <if test="score !=null and score!='' ">score=#{score},</if>
+        </trim>
+    </update>
+
+    <select id="wannabe" parameterType="java.lang.Integer" resultType="com.wule.pojo.UserInfo">
+        select * from user where is_driver="be_a_driver" limit #{start},1
+    </select>
+</mapper>
